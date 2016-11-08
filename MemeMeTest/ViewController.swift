@@ -43,16 +43,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //Action Functions
     @IBAction func pickImage(_ sender: Any){
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        self.present(imagePicker, animated: true, completion: nil)
+        presentImagePickerWith(sourceType: .photoLibrary)
     }
     
     @IBAction func pickImageFromCamera(_ sender: Any) {
+        presentImagePickerWith(sourceType: .camera)
+    }
+    
+    func presentImagePickerWith(sourceType: UIImagePickerControllerSourceType){
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+        imagePicker.sourceType = sourceType
         self.present(imagePicker, animated: true, completion: nil)
     }
     @IBAction func removeProgress(_ sender: Any) {
@@ -108,8 +109,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func generateMemedImage() -> UIImage{
-        topToolbar.isHidden = true;
-        bottomToolbar.isHidden = true;
+        configureBars(hidden: true)
         for textfield in textfieldsArray{
             textfield.endEditing(true)
         }
@@ -119,11 +119,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let memedImage : UIImage =
             UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-        
-        topToolbar.isHidden = false;
-        bottomToolbar.isHidden = false;
-
+        configureBars(hidden: false)
         return memedImage
+    }
+    
+    func configureBars(hidden: Bool){
+        topToolbar.isHidden = hidden
+        bottomToolbar.isHidden = hidden
     }
     
     //Keyboard Functions
