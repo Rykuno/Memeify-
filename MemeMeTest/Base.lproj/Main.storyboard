@@ -35,7 +35,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="lfo-yU-vLl"/>
-                                    <barButtonItem title="Albulm" id="m09-XF-2d8">
+                                    <barButtonItem title="Album" id="m09-XF-2d8">
                                         <connections>
                                             <action selector="pickImage:" destination="BYZ-38-t0r" id="FfM-Ar-78W"/>
                                         </connections>

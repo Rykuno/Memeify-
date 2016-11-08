@@ -108,7 +108,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func generateMemedImage() -> UIImage{
-        
         topToolbar.isHidden = true;
         bottomToolbar.isHidden = true;
         for textfield in textfieldsArray{
@@ -164,6 +163,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             NSStrokeWidthAttributeName : -3.0
             ] as [String : Any]
         
+        
+        //sets properties for each textfield in the array
         for textField in textfieldsArray {
             textField.delegate = memeTextDelegate
             textField.defaultTextAttributes = myAttributes
