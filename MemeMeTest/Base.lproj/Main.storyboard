@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dXH-yS-kGD">
-                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOQ-cx-BVK">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
@@ -80,24 +80,19 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MVC-Mv-Rdi" userLabel="EmptyImageView">
-                                <rect key="frame" x="59" y="193" width="256" height="280"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vGp-DR-gp1">
+                                <rect key="frame" x="104" y="266.5" width="166" height="110.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="addImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="5VL-7C-ZVU">
-                                        <rect key="frame" x="0.0" y="0.0" width="256" height="256"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="wGR-7l-xWa">
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="90"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add an image to Meme!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Glt-UV-jae">
-                                        <rect key="frame" x="0.0" y="256" width="256" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Picture to Meme!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIl-K7-lrL">
+                                        <rect key="frame" x="0.0" y="90" width="166" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="Glt-UV-jae" firstAttribute="top" secondItem="5VL-7C-ZVU" secondAttribute="bottom" id="GCd-Ru-jKO"/>
-                                    <constraint firstItem="5VL-7C-ZVU" firstAttribute="centerX" secondItem="Glt-UV-jae" secondAttribute="centerX" id="oyU-CX-vDj"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -109,11 +104,13 @@
                             <constraint firstItem="7ep-jh-U9S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="914-1X-cBq"/>
                             <constraint firstAttribute="trailing" secondItem="NOQ-cx-BVK" secondAttribute="trailing" id="Agi-Ug-CJE"/>
                             <constraint firstItem="QY2-3o-iIj" firstAttribute="centerX" secondItem="NOQ-cx-BVK" secondAttribute="centerX" id="Brg-ZM-W19"/>
-                            <constraint firstItem="dXH-yS-kGD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="D8U-jN-KBx"/>
+                            <constraint firstItem="dXH-yS-kGD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="D8U-jN-KBx"/>
                             <constraint firstItem="NOQ-cx-BVK" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="H3h-UT-Yoh"/>
+                            <constraint firstItem="vGp-DR-gp1" firstAttribute="centerY" secondItem="dXH-yS-kGD" secondAttribute="centerY" constant="-21.75" id="Hrs-ou-yI3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CkN-ql-RpD" secondAttribute="trailing" id="PW9-V2-d0B"/>
                             <constraint firstItem="NOQ-cx-BVK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QA0-ra-NsA"/>
                             <constraint firstItem="dXH-yS-kGD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="16" id="R6N-tj-UNV"/>
+                            <constraint firstItem="vGp-DR-gp1" firstAttribute="centerX" secondItem="dXH-yS-kGD" secondAttribute="centerX" id="Rxa-z1-FEv"/>
                             <constraint firstItem="dXH-yS-kGD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="WLa-pE-5NB"/>
                             <constraint firstItem="NOQ-cx-BVK" firstAttribute="top" secondItem="dXH-yS-kGD" secondAttribute="bottom" id="ZCg-Sm-SMu"/>
                             <constraint firstItem="CkN-ql-RpD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aoK-pn-3nI"/>
@@ -131,7 +128,7 @@
                         <outlet property="bottomToolbar" destination="7ep-jh-U9S" id="G84-Lz-Hwn"/>
                         <outlet property="cameraButton" destination="MkS-nH-SeK" id="xq7-bB-3JA"/>
                         <outlet property="cancelButton" destination="Fr5-aV-Iru" id="J9F-i2-D7M"/>
-                        <outlet property="emptyImageView" destination="MVC-Mv-Rdi" id="tSF-No-zio"/>
+                        <outlet property="emptyImageView" destination="vGp-DR-gp1" id="dbG-VJ-asm"/>
                         <outlet property="imageView" destination="dXH-yS-kGD" id="e9R-Jd-89F"/>
                         <outlet property="shareButton" destination="ULv-jt-QCf" id="KWM-Fs-hB5"/>
                         <outlet property="topTextView" destination="QY2-3o-iIj" id="n5B-ym-2FC"/>
@@ -140,10 +137,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="40.799999999999997" y="42.728635682158924"/>
+            <point key="canvasLocation" x="-469.60000000000002" y="-35.532233883058474"/>
         </scene>
     </scenes>
     <resources>
-        <image name="addImageIcon" width="256" height="256"/>
+        <image name="addImageIcon" width="90" height="90"/>
     </resources>
 </document>

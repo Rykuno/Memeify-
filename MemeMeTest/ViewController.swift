@@ -16,8 +16,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var topToolbar: UIToolbar!
     @IBOutlet weak var bottomToolbar: UIToolbar!
-    @IBOutlet weak var emptyImageView: UIStackView!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var emptyImageView: UIStackView!
 
     var textfieldsArray: [UITextField] = []
     let memeTextDelegate = MemeTextFieldDelegate()
@@ -59,7 +59,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let controller = UIAlertController()
         controller.title = ""
         controller.message = "Delete Meme?"
-        
         let YesAction = UIAlertAction(title: "Yes", style: UIAlertActionStyle.default) { _ in
             self.imageView.image = nil
             self.setVisibilityOfFields()
@@ -125,7 +124,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topToolbar.isHidden = false;
         bottomToolbar.isHidden = false;
 
-    
         return memedImage
     }
     
@@ -166,10 +164,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             NSStrokeWidthAttributeName : -3.0
             ] as [String : Any]
         
-        self.topTextView.delegate = memeTextDelegate
-        self.bottomTextView.delegate = memeTextDelegate
-        
         for textField in textfieldsArray {
+            textField.delegate = memeTextDelegate
             textField.defaultTextAttributes = myAttributes
             textField.text = textField.accessibilityHint
             textField.textAlignment = NSTextAlignment.center
